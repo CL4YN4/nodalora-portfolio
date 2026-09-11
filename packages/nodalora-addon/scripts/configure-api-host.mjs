@@ -1,3 +1,4 @@
+import { isIP } from "node:net";
 import { readFile, writeFile } from "node:fs/promises";
 
 const apiHost = process.env.NODALORA_API_HOST?.trim().toLowerCase();
@@ -9,7 +10,16 @@ if (apiHost.endsWith(".example")) {
 }
 
 const candidate = new URL(`https://${apiHost}`);
-if (candidate.hostname !== apiHost || candidate.port || candidate.pathname !== "/") {
+const hostname = candidate.hostname.replace(/^\[|\]$/g, "");
+if (
+  candidate.hostname !== apiHost ||
+  candidate.port ||
+  candidate.pathname !== "/" ||
+  isIP(hostname) !== 0 ||
+  hostname === "localhost" ||
+  hostname.endsWith(".localhost") ||
+  /\.(?:example|invalid|local|test)$/.test(hostname)
+) {
   throw new Error("NODALORA_API_HOST must be a hostname without a scheme, path, or port");
 }
 
