@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "name": "Nodalora Portfolio",
+  "repository": "https://github.com/CL4YN4/nodalora-portfolio",
+  "upstream": {
+    "repository": "https://github.com/wealthfolio/wealthfolio",
+    "release": "v3.8.0",
+    "commit": "8f6f9898d30e84d7215e01d3d06cd65e02c9ab1b"
+  },
+  "license": "AGPL-3.0-only",
+  "image": "ghcr.io/cl4yn4/nodalora-portfolio",
+  "platforms": ["linux/amd64", "linux/arm64"],
+  "sqlitePath": "/data/wealthfolio.db",
+  "nodaloraApi": {
+    "schemaVersion": "1.0",
+    "intakePath": "/api/v1/source-connections/{sourceConnectionId}/portfolio-observations",
+    "authentication": "revocable-bearer"
+  }
+}

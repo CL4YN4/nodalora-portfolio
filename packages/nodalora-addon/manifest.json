@@ -1,0 +1,146 @@
+{
+  "id": "nodalora-portfolio",
+  "name": "Nodalora Portfolio",
+  "version": "0.1.0",
+  "description": "Send an explicitly selected Wealthfolio Portfolio Observation to Nodalora for review and monitoring.",
+  "author": "CL4YN4",
+  "main": "dist/addon.js",
+  "sdkVersion": "3.8.0",
+  "minWealthfolioVersion": "3.8.0",
+  "enabled": true,
+  "license": "AGPL-3.0-only",
+  "homepage": "https://github.com/CL4YN4/nodalora-portfolio",
+  "repository": "https://github.com/CL4YN4/nodalora-portfolio",
+  "keywords": ["nodalora", "portfolio-observation", "wealthfolio"],
+  "contributes": {
+    "routes": [
+      {
+        "id": "nodalora-portfolio"
+      }
+    ],
+    "links": {
+      "sidebar": [
+        {
+          "id": "nodalora-portfolio",
+          "route": "nodalora-portfolio",
+          "label": "Nodalora Portfolio",
+          "icon": "chart-line-up",
+          "order": 90
+        }
+      ]
+    }
+  },
+  "permissions": [
+    {
+      "category": "accounts",
+      "functions": [
+        {
+          "name": "getAll",
+          "isDeclared": true,
+          "isDetected": false
+        }
+      ],
+      "purpose": "Choose the accounts included in a Portfolio Observation."
+    },
+    {
+      "category": "portfolio",
+      "functions": [
+        {
+          "name": "getHoldings",
+          "isDeclared": true,
+          "isDetected": false
+        },
+        {
+          "name": "getLatestValuations",
+          "isDeclared": true,
+          "isDetected": false
+        }
+      ],
+      "purpose": "Read selected account holdings and valuations."
+    },
+    {
+      "category": "quotes",
+      "functions": [
+        {
+          "name": "getHistory",
+          "isDeclared": true,
+          "isDetected": false
+        }
+      ],
+      "purpose": "Preserve quote evidence used by the observation."
+    },
+    {
+      "category": "currency",
+      "functions": [
+        {
+          "name": "getAll",
+          "isDeclared": true,
+          "isDetected": false
+        }
+      ],
+      "purpose": "Preserve exchange-rate evidence used by the observation."
+    },
+    {
+      "category": "snapshots",
+      "functions": [
+        {
+          "name": "getAll",
+          "isDeclared": true,
+          "isDetected": false
+        }
+      ],
+      "purpose": "Preserve account snapshot evidence used by the observation."
+    },
+    {
+      "category": "settings",
+      "functions": [
+        {
+          "name": "get",
+          "isDeclared": true,
+          "isDetected": false
+        }
+      ],
+      "purpose": "Read the user's base currency."
+    },
+    {
+      "category": "secrets",
+      "functions": [
+        {
+          "name": "set",
+          "isDeclared": true,
+          "isDetected": false
+        },
+        {
+          "name": "get",
+          "isDeclared": true,
+          "isDetected": false
+        },
+        {
+          "name": "delete",
+          "isDeclared": true,
+          "isDetected": false
+        }
+      ],
+      "purpose": "Store the Nodalora source credential in Wealthfolio's secure addon storage."
+    },
+    {
+      "category": "network",
+      "functions": [
+        {
+          "name": "request",
+          "isDeclared": true,
+          "isDetected": false
+        }
+      ],
+      "purpose": "Submit the selected observation to the configured Nodalora HTTPS host."
+    }
+  ],
+  "network": {
+    "allowedHosts": ["api.nodalora.example"]
+  },
+  "hostDependencies": {
+    "@wealthfolio/addon-sdk": "^3.8.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

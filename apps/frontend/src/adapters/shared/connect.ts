@@ -322,7 +322,7 @@ export const confirmPairingWithBootstrap = async (
 };
 
 // ============================================================================
-// Wealthfolio Connect Auth Commands
+// Nodalora Portfolio Connect Auth Commands
 // ============================================================================
 
 export const restoreSyncSession = async (): Promise<{

@@ -50,7 +50,7 @@
     "userFallback": "使用者",
     "active": "使用中",
     "signOut": "登出",
-    "signOutTitle": "要登出 Wealthfolio Connect 嗎？",
+    "signOutTitle": "要登出 Nodalora Portfolio Connect 嗎？",
     "signOutMessage": "你必須重新登入，才能存取已同步的券商帳戶。本機資料不會受到影響。",
     "signOutConfirm": "登出",
     "signingOut": "正在登出…"
@@ -203,7 +203,7 @@
   },
   "serviceUnavailable": {
     "title": "服務暫時不可用",
-    "description": "連線 Wealthfolio Connect 時發生問題。這通常只是暫時狀況，應該很快就會恢復。",
+    "description": "連線 Nodalora Portfolio Connect 時發生問題。這通常只是暫時狀況，應該很快就會恢復。",
     "retrying": "正在重試…",
     "tryAgain": "重試"
   },
@@ -213,7 +213,7 @@
     "button": "升級"
   },
   "privacy": {
-    "footnote": "Wealthfolio Connect 不會儲存你的券商憑證或財務資料。資料會透過資料彙整服務商安全地同步到本機資料庫。裝置同步採用端對端加密。<privacyLink>了解更多</privacyLink>"
+    "footnote": "Nodalora Portfolio Connect 不會儲存你的券商憑證或財務資料。資料會透過資料彙整服務商安全地同步到本機資料庫。裝置同步採用端對端加密。<privacyLink>了解更多</privacyLink>"
   },
   "providers": {
     "continueWithGoogle": "使用 Google 繼續",

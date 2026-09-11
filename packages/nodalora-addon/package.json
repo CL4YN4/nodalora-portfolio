@@ -1,0 +1,32 @@
+{
+  "name": "@cl4yn4/nodalora-portfolio-addon",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Thin Wealthfolio addon for sending selected Portfolio Observations to Nodalora",
+  "type": "module",
+  "main": "dist/addon.js",
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "package": "find dist -name '*.map' -delete && zip -r dist/nodalora-portfolio-addon-$npm_package_version.zip manifest.json dist/ README.md -x '*.map'",
+    "bundle": "pnpm build && pnpm package",
+    "type-check": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@wealthfolio/addon-sdk": "workspace:*",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@wealthfolio/addon-sdk": "workspace:*",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.2.13",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.0.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5"
+  }
+}

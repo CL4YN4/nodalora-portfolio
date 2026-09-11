@@ -13,7 +13,7 @@ import { getTaxonomy } from "./taxonomies";
 
 const MAX_CATEGORY_PATH_DEPTH = 8;
 
-/** Maps the addon-facing `SpendCategoryKind` to Wealthfolio's fixed taxonomy ids. */
+/** Maps the addon-facing `SpendCategoryKind` to Nodalora Portfolio's fixed taxonomy ids. */
 export const SPEND_CATEGORY_KIND_TO_TAXONOMY_ID: Record<SpendCategoryKind, string> = {
   expense: "spending_categories",
   income: "income_sources",

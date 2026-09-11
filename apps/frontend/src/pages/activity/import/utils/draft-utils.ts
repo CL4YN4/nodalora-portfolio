@@ -232,7 +232,7 @@ export function parseDateValue(
 }
 
 /**
- * Map a CSV activity type value to a Wealthfolio activity type.
+ * Map a CSV activity type value to a Nodalora Portfolio activity type.
  * Returns only explicit user/template mappings.
  */
 export function mapActivityType(

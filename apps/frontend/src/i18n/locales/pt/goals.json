@@ -530,7 +530,7 @@
     "italian": {
       "title": "Configuração de aposentadoria italiana (fondo pensione, TFR, INPS)",
       "portfolio_title": "Carteira de investimento (Golden Butterfly, All-Weather…)",
-      "portfolio_desc": "Esta é sua carteira principal, o valor que o Wealthfolio acompanha. Defina aqui suas premissas de retorno, o peso das taxas e o aporte mensal. É o principal motor de acumulação do seu plano de aposentadoria.",
+      "portfolio_desc": "Esta é sua carteira principal, o valor que o Nodalora Portfolio acompanha. Defina aqui suas premissas de retorno, o peso das taxas e o aporte mensal. É o principal motor de acumulação do seu plano de aposentadoria.",
       "fondo_title": "Fondo pensione integrativo (fundo de previdência complementar)",
       "fondo_desc": "Use Adicionar fundo de pensão. Informe saldo, contribuição, retorno suposto e idade de início dos pagamentos. A estimativa usa a taxa de pagamento configurada, salvo se informar um valor mensal. Os saques cessam quando o fundo se esgota; anuidades são modeladas até o horizonte do plano.",
       "inps_title": "Pensione INPS (pensão estatal — previdência obrigatória)",

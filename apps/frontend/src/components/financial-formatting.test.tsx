@@ -3,7 +3,7 @@ import { FormattingProvider, GainAmount, GainPercent } from "@wealthfolio/ui";
 import { describe, expect, it } from "vitest";
 
 describe("localized financial components", () => {
-  it("preserves Wealthfolio quote-unit symbols in gain amounts", () => {
+  it("preserves Nodalora Portfolio quote-unit symbols in gain amounts", () => {
     render(
       <FormattingProvider locale="US" uiLocale="en">
         <GainAmount value={12.34} currency="GBp" />

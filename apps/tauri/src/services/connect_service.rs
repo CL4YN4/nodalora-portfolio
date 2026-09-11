@@ -1,4 +1,4 @@
-//! Service for interacting with Wealthfolio Connect cloud API.
+//! Service for interacting with Nodalora Portfolio Connect cloud API.
 //!
 //! This service wraps the ConnectApiClient with keyring token retrieval,
 //! providing a simple interface for cloud API operations.
@@ -56,7 +56,7 @@ fn token_lifecycle_config() -> Option<TokenLifecycleConfig> {
     Some(TokenLifecycleConfig::new(auth_url, publishable_key))
 }
 
-/// Service for interacting with Wealthfolio Connect cloud API.
+/// Service for interacting with Nodalora Portfolio Connect cloud API.
 ///
 /// This service handles keyring token retrieval and provides
 /// convenient methods for common cloud API operations.

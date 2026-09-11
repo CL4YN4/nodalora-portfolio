@@ -80,7 +80,7 @@
   },
   "connect": {
     "optional": "選用",
-    "title": "Wealthfolio Connect",
+    "title": "Nodalora Portfolio Connect",
     "subtitle": "自動同步券商資料，同時保護資料隱私。",
     "learnMore": "進一步瞭解 Connect",
     "features": {

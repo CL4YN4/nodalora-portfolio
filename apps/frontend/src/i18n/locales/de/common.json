@@ -296,7 +296,7 @@
     "calculation_note": "Berechnungshinweis",
     "calculation_notes": "Berechnungshinweise ({{count}})",
     "backend_unavailable": "Backend nicht verfügbar",
-    "backend_load_error": "Wealthfolio konnte die Einstellungen nicht vom Backend laden.",
+    "backend_load_error": "Nodalora Portfolio konnte die Einstellungen nicht vom Backend laden.",
     "new_update_available": "Neue Aktualisierung verfügbar",
     "close_dialog": "Dialog schließen",
     "screenshot_alt": "Screenshot {{number}}",
@@ -316,7 +316,7 @@
     "calculation_notes_one": "Berechnungshinweis ({{count}})",
     "calculation_notes_other": "Berechnungshinweise ({{count}})"
   },
-  "app_name": "Wealthfolio",
+  "app_name": "Nodalora Portfolio",
   "deselect_all": "Alle abwählen",
   "globalEvents": {
     "syncingMarket": "Marktdaten werden synchronisiert...",

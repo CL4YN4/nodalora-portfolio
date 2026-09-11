@@ -50,7 +50,7 @@
     "userFallback": "Usuário",
     "active": "Ativo",
     "signOut": "Sair",
-    "signOutTitle": "Sair do Wealthfolio Connect?",
+    "signOutTitle": "Sair do Nodalora Portfolio Connect?",
     "signOutMessage": "Você precisará entrar novamente para acessar suas contas de corretoras sincronizadas. Seus dados locais não serão afetados.",
     "signOutConfirm": "Sair",
     "signingOut": "Saindo..."
@@ -220,7 +220,7 @@
   },
   "serviceUnavailable": {
     "title": "Serviço temporariamente indisponível",
-    "description": "Estamos com problemas para conectar ao Wealthfolio Connect. Isso costuma ser temporário e deve ser resolvido em breve.",
+    "description": "Estamos com problemas para conectar ao Nodalora Portfolio Connect. Isso costuma ser temporário e deve ser resolvido em breve.",
     "retrying": "Tentando novamente...",
     "tryAgain": "Tentar novamente"
   },
@@ -230,7 +230,7 @@
     "button": "Fazer upgrade"
   },
   "privacy": {
-    "footnote": "O Wealthfolio Connect não armazena as credenciais da sua corretora nem seus dados financeiros. Tudo é sincronizado com segurança por meio de um agregador para seu banco de dados local. A sincronização de dispositivos usa criptografia de ponta a ponta. <privacyLink>Saiba mais</privacyLink>"
+    "footnote": "O Nodalora Portfolio Connect não armazena as credenciais da sua corretora nem seus dados financeiros. Tudo é sincronizado com segurança por meio de um agregador para seu banco de dados local. A sincronização de dispositivos usa criptografia de ponta a ponta. <privacyLink>Saiba mais</privacyLink>"
   },
   "providers": {
     "continueWithGoogle": "Continuar com Google",

@@ -200,14 +200,14 @@
     "health": {
       "add_price_for_date": "Ajouter un prix pour le {{date}}",
       "manual_prices_need_review": "Les prix manuels doivent être vérifiés",
-      "carrying_forward_add_date": "Wealthfolio reporte le dernier prix. Ajoutez cette date uniquement si elle nécessite sa propre valeur.",
+      "carrying_forward_add_date": "Nodalora Portfolio reporte le dernier prix. Ajoutez cette date uniquement si elle nécessite sa propre valeur.",
       "review_missing_dates": "Vérifiez les dates manquantes. Ajoutez les prix qui nécessitent leur propre valeur ; les prix reportés restent utilisés entre les entrées.",
       "price_missing_for_date": "Prix manquant pour le {{date}}",
       "price_history_needs_review": "L’historique des prix doit être vérifié",
-      "carrying_forward_refetch": "Wealthfolio reporte le dernier prix disponible. Rechargez les prix s’il s’agissait d’un jour de bourse.",
+      "carrying_forward_refetch": "Nodalora Portfolio reporte le dernier prix disponible. Rechargez les prix s’il s’agissait d’un jour de bourse.",
       "refetch_history": "Rechargez l’historique du fournisseur pour restaurer les prix manquants ou obsolètes. Les prix reportés sont utilisés jusqu’à ce que les prix exacts soient disponibles.",
       "cost_basis_needs_review": "Le prix de revient doit être vérifié",
-      "cost_basis_description": "Mettez à jour le montant payé pour que Wealthfolio puisse calculer le gain ou la perte.",
+      "cost_basis_description": "Mettez à jour le montant payé pour que Nodalora Portfolio puisse calculer le gain ou la perte.",
       "transactions_need_review": "Les transactions doivent être vérifiées",
       "transactions_description": "Vérifiez les transactions signalées par le Centre de santé pour cet investissement.",
       "refetch_prices": "Recharger les prix"

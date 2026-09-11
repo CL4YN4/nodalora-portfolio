@@ -200,14 +200,14 @@
     "health": {
       "add_price_for_date": "添加 {{date}} 的价格",
       "manual_prices_need_review": "手动价格需要检查",
-      "carrying_forward_add_date": "Wealthfolio 正在沿用上一个价格。仅当该日期需要独立价格时才添加。",
+      "carrying_forward_add_date": "Nodalora Portfolio 正在沿用上一个价格。仅当该日期需要独立价格时才添加。",
       "review_missing_dates": "请检查缺失的日期，并为需要独立价格的日期添加价格；在条目之间仍会使用沿用价格。",
       "price_missing_for_date": "缺少 {{date}} 的价格",
       "price_history_needs_review": "价格历史需要检查",
-      "carrying_forward_refetch": "Wealthfolio 正在沿用最近的可用价格。如果当天是交易日，请重新获取价格。",
+      "carrying_forward_refetch": "Nodalora Portfolio 正在沿用最近的可用价格。如果当天是交易日，请重新获取价格。",
       "refetch_history": "重新获取提供商历史记录以恢复缺失或过期的价格。在精确价格可用之前，将继续使用沿用价格。",
       "cost_basis_needs_review": "成本基础需要检查",
-      "cost_basis_description": "更新此持仓的买入成本，以便 Wealthfolio 计算盈亏。",
+      "cost_basis_description": "更新此持仓的买入成本，以便 Nodalora Portfolio 计算盈亏。",
       "transactions_need_review": "交易需要检查",
       "transactions_description": "检查健康中心为此投资标记的交易。",
       "refetch_prices": "重新获取价格"

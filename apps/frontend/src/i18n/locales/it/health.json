@@ -204,7 +204,7 @@
     "retry": "Riprova"
   },
   "sheet": {
-    "groupedPriceMessage": "Wealthfolio sta utilizzando prezzi riportati per queste date. Recupera nuovamente o aggiungi i prezzi per i giorni di negoziazione effettivi; ignora il problema se le date erano festivi o giorni non lavorativi.",
+    "groupedPriceMessage": "Nodalora Portfolio sta utilizzando prezzi riportati per queste date. Recupera nuovamente o aggiungi i prezzi per i giorni di negoziazione effettivi; ignora il problema se le date erano festivi o giorni non lavorativi.",
     "pricesByInvestment": "Prezzi per investimento",
     "pricesByInvestmentHint": "Apri un investimento per recuperare nuovamente o aggiungere prezzi. Se le date erano festivi o giorni non lavorativi, ignora il problema.",
     "priceHistoryNeedsReview": "Lo storico dei prezzi richiede revisione",

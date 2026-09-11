@@ -308,7 +308,7 @@ export const COMMANDS: CommandMap = {
   get_pairing_flow_state: { method: "POST", path: "/sync/pairing/flow/state" },
   approve_pairing_overwrite: { method: "POST", path: "/sync/pairing/flow/approve-overwrite" },
   cancel_pairing_flow: { method: "POST", path: "/sync/pairing/flow/cancel" },
-  // Wealthfolio Connect (Broker Sync)
+  // Nodalora Portfolio Connect (Broker Sync)
   store_sync_session: { method: "POST", path: "/connect/session" },
   post_login_bootstrap: { method: "POST", path: "/connect/post-login-bootstrap" },
   clear_sync_session: { method: "DELETE", path: "/connect/session" },
@@ -1831,7 +1831,7 @@ export const invoke = async <T>(command: string, payload?: Record<string, unknow
       body = JSON.stringify(payload ?? {});
       break;
     }
-    // Wealthfolio Connect commands
+    // Nodalora Portfolio Connect commands
     case "store_sync_session": {
       const { refreshToken } = payload as {
         refreshToken: string;

@@ -2,7 +2,7 @@
  * Derives a stable categorization-rule id from an addon-supplied `ruleKey`.
  * The `addonId` prefix keeps ids from different addons distinct even when
  * they pick the same ruleKey text, and is readable provenance when a user
- * browses rules in Wealthfolio's own Settings UI. Hashing only `ruleKey`
+ * browses rules in Nodalora Portfolio's own Settings UI. Hashing only `ruleKey`
  * (not the addonId too) keeps the id compact regardless of ruleKey length
  * without needing a delimiter between the two.
  */

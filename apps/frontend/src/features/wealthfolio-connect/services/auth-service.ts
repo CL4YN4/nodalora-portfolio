@@ -8,7 +8,7 @@ import {
 import type { PostLoginBootstrapResult } from "@/adapters/types";
 
 /**
- * Store Wealthfolio Connect tokens in the backend's encrypted secret store.
+ * Store Nodalora Portfolio Connect tokens in the backend's encrypted secret store.
  * The backend uses the refresh token to mint fresh access tokens when needed.
  * Works in both desktop (Tauri) and web modes.
  */
@@ -23,11 +23,11 @@ export const storeSyncSession = async (refreshToken: string): Promise<void> => {
 };
 
 /**
- * Clear Wealthfolio Connect session from the backend's secret store.
+ * Clear Nodalora Portfolio Connect session from the backend's secret store.
  * Works in both desktop (Tauri) and web modes.
  */
 /**
- * Restore Wealthfolio Connect session from the backend (web mode only).
+ * Restore Nodalora Portfolio Connect session from the backend (web mode only).
  * The backend holds the canonical refresh token and can mint a fresh access token.
  */
 export const restoreSyncSession = async (): Promise<{

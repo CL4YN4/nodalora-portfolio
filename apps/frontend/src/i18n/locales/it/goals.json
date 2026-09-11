@@ -530,7 +530,7 @@
     "italian": {
       "title": "Impostazione pensionistica italiana (fondo pensione, TFR, INPS)",
       "portfolio_title": "Portafoglio di investimento (Golden Butterfly, All-Weather…)",
-      "portfolio_desc": "Questo è il tuo portafoglio principale, il valore che Wealthfolio traccia. Imposta qui le tue ipotesi di rendimento, il costo delle commissioni e il contributo mensile. È il motore principale di accumulo del tuo piano pensionistico.",
+      "portfolio_desc": "Questo è il tuo portafoglio principale, il valore che Nodalora Portfolio traccia. Imposta qui le tue ipotesi di rendimento, il costo delle commissioni e il contributo mensile. È il motore principale di accumulo del tuo piano pensionistico.",
       "fondo_title": "Fondo pensione integrativo",
       "fondo_desc": "Usa Aggiungi fondo pensione. Inserisci saldo, contributo, rendimento ipotizzato ed età di erogazione. La stima usa il tasso di erogazione configurato, salvo inserimento di un importo mensile. I prelievi cessano all’esaurimento del fondo; le rendite sono modellate fino all’orizzonte del piano.",
       "inps_title": "Pensione INPS (previdenza obbligatoria)",

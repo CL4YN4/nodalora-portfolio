@@ -179,7 +179,7 @@
     "retry": "重試"
   },
   "sheet": {
-    "groupedPriceMessage": "Wealthfolio 在這些日期沿用了前一個交易日的價格。若為實際交易日，請重新取得或新增價格；若為假日或非交易日，則可忽略此問題。",
+    "groupedPriceMessage": "Nodalora Portfolio 在這些日期沿用了前一個交易日的價格。若為實際交易日，請重新取得或新增價格；若為假日或非交易日，則可忽略此問題。",
     "pricesByInvestment": "依投資項目分類的價格",
     "pricesByInvestmentHint": "開啟某項投資以重新取得或新增價格。如果這些日期是假日或非交易日，請忽略此問題。",
     "priceHistoryNeedsReview": "價格歷史需要檢查",

@@ -1,9 +1,9 @@
 # Global build args
-ARG RUST_IMAGE=rust:1.91-alpine
+ARG RUST_IMAGE=rust:1.91-alpine@sha256:45c1c35cd364b8055e9e86f8ecd3e8c874b2dcb658d8a4f94b5d111aa0d651a2
 
 # Stage 1: build frontend
 # Use --platform=$BUILDPLATFORM to run on the native runner (fast)
-FROM --platform=$BUILDPLATFORM node:24-alpine AS frontend
+FROM --platform=$BUILDPLATFORM node:24-alpine@sha256:50c8e8ca1d27439048670df5883f32d57cf81cff6233222c893fd0d9884cbd81 AS frontend
 
 # Wealthfolio Connect configuration (baked into JS bundle at build time)
 # Pass via --build-arg to enable; omit to build without Connect.
@@ -17,12 +17,14 @@ COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY . .
 ENV CI=1
 ENV BUILD_TARGET=web
-RUN npm install -g pnpm@9.9.0 && pnpm install --frozen-lockfile
+RUN corepack enable && corepack install --global pnpm@10.33.4 && pnpm install --frozen-lockfile
 # Build only the main app to avoid building workspace addons in this image
-RUN pnpm --filter frontend... build && mv dist /web-dist
+RUN pnpm --filter frontend... build && mv dist /web-dist && \
+    rm -f /web-dist/app-icon-*.png /web-dist/apple-touch-icon.png \
+      /web-dist/logo*.png /web-dist/wf-*.png /web-dist/splashscreen.png
 
 # Stage 2: build server with cross-compilation
-FROM --platform=$BUILDPLATFORM tonistiigi/xx AS xx
+FROM --platform=$BUILDPLATFORM tonistiigi/xx:latest@sha256:c64defb9ed5a91eacb37f96ccc3d4cd72521c4bd18d5442905b95e2226b0e707 AS xx
 
 FROM --platform=$BUILDPLATFORM ${RUST_IMAGE} AS backend
 # Copy xx scripts to handle cross-compilation
@@ -71,7 +73,7 @@ RUN xx-cargo build --release --manifest-path apps/server/Cargo.toml && \
     cp target/$(xx-cargo --print-target-triple)/release/wealthfolio-server /wealthfolio-server
 
 # Final stage
-FROM alpine:3.19
+FROM alpine:3.19@sha256:6baf43584bcb78f2e5847d1de515f23499913ac9f12bdf834811a3145eb11ca1
 WORKDIR /app
 # Copy from backend (which is now build platform, but binary is target platform)
 COPY --from=backend /wealthfolio-server /usr/local/bin/wealthfolio-server
@@ -84,11 +86,11 @@ ENV CONNECT_API_URL=${CONNECT_API_URL}
 # Run as non-root. chown /data BEFORE the VOLUME directive so named volumes
 # inherit ownership on first creation. Existing volumes from older images
 # need a one-time chown — see docs/self-host/README.md.
-RUN addgroup -S -g 1000 wealthfolio \
- && adduser -S -u 1000 -G wealthfolio -H -s /sbin/nologin wealthfolio \
+RUN addgroup -S -g 1000 nodalora \
+ && adduser -S -u 1000 -G nodalora -H -s /sbin/nologin nodalora \
  && mkdir -p /data \
- && chown -R wealthfolio:wealthfolio /data
-USER 1000:1000
+ && chown -R nodalora:nodalora /data
+USER nodalora
 
 VOLUME ["/data"]
 EXPOSE 8088

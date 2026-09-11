@@ -58,7 +58,7 @@ export function AppSidebar({ navigation }: AppSidebarProps) {
                         collapsed ? "[transform:rotateY(180deg)]" : ""
                       }`}
                       aria-hidden="true"
-                      src="/logo.png"
+                      src="/nodalora-mark.svg"
                     />
                   </Link>
 
@@ -71,7 +71,7 @@ export function AppSidebar({ navigation }: AppSidebarProps) {
                       },
                     )}
                   >
-                    Wealthfolio
+                    Nodalora Portfolio
                   </span>
                 </div>
 

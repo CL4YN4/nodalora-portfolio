@@ -877,7 +877,7 @@ pub fn run() {
             commands::fire::run_retirement_stress_tests,
         ])
         .build(tauri::generate_context!())
-        .expect("Failed to build Wealthfolio application")
+        .expect("Failed to build Nodalora Portfolio application")
         .run(|_handle, event| {
             #[cfg(desktop)]
             if matches!(

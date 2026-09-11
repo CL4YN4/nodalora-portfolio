@@ -1,5 +1,5 @@
 {
-  "app_name": "Wealthfolio",
+  "app_name": "Nodalora Portfolio",
   "welcome": "Bem-vindo",
   "loading": "Carregando...",
   "load_more": "Carregar mais...",
@@ -303,7 +303,7 @@
     "calculation_note": "Nota de cálculo",
     "calculation_notes": "Notas de cálculo ({{count}})",
     "backend_unavailable": "Backend indisponível",
-    "backend_load_error": "O Wealthfolio não conseguiu carregar as configurações do backend.",
+    "backend_load_error": "O Nodalora Portfolio não conseguiu carregar as configurações do backend.",
     "new_update_available": "Nova atualização disponível",
     "close_dialog": "Fechar diálogo",
     "screenshot_alt": "Captura de tela {{number}}",

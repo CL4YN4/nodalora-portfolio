@@ -1,5 +1,5 @@
 /**
- * Wealthfolio Connect feature flag.
+ * Nodalora Portfolio Connect feature flag.
  *
  * The Connect module (auth, broker sync, cloud API) is optional.
  * When these environment variables are not set, the app runs fully offline

@@ -1,9 +1,9 @@
 <div align="center">
-  <a href="https://github.com/wealthfolio/wealthfolio">
-    <img src="assets/brand/icon.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/CL4YN4/nodalora-portfolio">
+    <img src="apps/frontend/public/nodalora-mark.svg" alt="Nodalora Portfolio logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Wealthfolio</h3>
+  <h3 align="center">Nodalora Portfolio</h3>
 
   <p align="center">
     The open-source, private portfolio tracker — investments, net worth, spending, and simulations.
@@ -11,59 +11,30 @@
     Local-first: your data lives on your device.
     <br />
     <br />
-    <a href="https://wealthfolio.app?utm_source=github&utm_medium=readme">Website</a>
+    <a href="https://github.com/CL4YN4/nodalora-portfolio">Repository</a>
     ·
-    <a href="https://discord.gg/WDMCY6aPWK">Discord</a>
-    ·
-    <a href="https://x.com/intent/follow?screen_name=WealthfolioApp">Twitter</a>
-    ·
-    <a href="https://github.com/wealthfolio/wealthfolio/releases">Releases</a>
+    <a href="https://github.com/CL4YN4/nodalora-portfolio/releases">Releases</a>
   </p>
 
   <p align="center">
-    <a href="https://wealthfolio.app/download?utm_source=github&utm_medium=readme&utm_campaign=cta"><strong>⬇️&nbsp;&nbsp;Download for macOS · Windows · Linux</strong></a>
+    <a href="NODALORA-DISTRIBUTION.md"><strong>📦&nbsp;&nbsp;Nodalora distribution</strong></a>
     &nbsp;·&nbsp;
-    <a href="https://apps.apple.com/us/app/wealthfolio-private-finance/id6732888445">📱&nbsp;iOS&nbsp;App</a>
-    &nbsp;·&nbsp;
-    <a href="https://wealthfolio.app/docs/guide/self-hosting/docker?utm_source=github&utm_medium=readme">🐳&nbsp;Docker</a>
+    <a href="compose.yml">🐳&nbsp;Docker</a>
   </p>
-</div>
-<div align="center">
-
-[<img src="./apps/frontend/public/button-buy-me-a-coffee.png" width="180" alt="Buy me a coffee button"/>](https://www.buymeacoffee.com/afadil)
-
-</div>
-
-<div align="center">
-<a href="https://news.ycombinator.com/item?id=41465735">
-  <img
-    alt="Featured on Hacker News"
-    src="https://hackerbadge.now.sh/api?id=41465735"
-    style="width: 250px; height: 55px;" width="250" height="55"
-  />
-</a>
-  <a href="https://www.producthunt.com/posts/wealthfolio?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_souce=badge-wealthfolio" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=461640&amp;theme=light" alt="Wealthfolio - A beautiful, local-first personal finance tracker | Product Hunt" class="h-[55px] w-[250px]" width="250" height="55"></a>
-
-  <a href="https://trendshift.io/repositories/11701" target="_blank">
-  <img src="https://trendshift.io/api/badge/repositories/11701" alt="wealthfolio%2Fwealthfolio | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-
-</div>
-
 ## Introduction
 
-**Wealthfolio** is an open-source, private portfolio tracker — investments, net
-worth, spending, and simulations. All your data is stored locally on your
-device: no cloud database, no account required, free forever.
+**Nodalora Portfolio** is an open-source, private portfolio tracker —
+investments, net worth, spending, and simulations. All your data is stored
+locally on your device: no cloud database, no account required, free forever.
 
-For automatic brokerage syncing (30+ institutions, read-only) and encrypted
-multi-device sync, there's
-**[Wealthfolio Connect](https://wealthfolio.app/connect?utm_source=github&utm_medium=readme)**
-— an optional subscription that covers the real cost of the brokerage data
-connections. The app never requires it: manual tracking and CSV import are free,
-forever.
+For the Nodalora review workflow, the optional
+**[Nodalora addon](NODALORA-DISTRIBUTION.md)** sends an explicitly selected
+Portfolio Observation to the Nodalora API over a revocable HTTPS credential. The
+app remains useful without the addon: local tracking and CSV import stay local.
 
-Visit the website at
-[wealthfolio.app](https://wealthfolio.app/?utm_source=github&utm_medium=readme).
+This fork is maintained separately from the upstream project. See
+[`NODALORA-DISTRIBUTION.md`](NODALORA-DISTRIBUTION.md) for the boundary,
+licensing, source, and release policy.
 
 ![Screenshot](apps/frontend/public/screenshot.webp)
 
@@ -77,25 +48,24 @@ Visit the website at
 - **🎯 Goal Planning** - Set and track financial goals with allocation
   management
 - **🔒 Local Data** - All data stored locally with no cloud dependencies
-- **🔄 Optional Broker Sync** - Auto-sync 30+ brokerages with
-  [Wealthfolio Connect](https://wealthfolio.app/connect?utm_source=github&utm_medium=readme)
-  (read-only, entirely optional)
+- **🔄 Optional Nodalora review** - Send selected portfolio observations through
+  the separately hosted Nodalora API
 - **🧩 Extensible** - Powerful addon system for custom functionality
 - **🌍 Multi-Currency** - Support for multiple currencies with exchange rate
   management
 - **📱 Cross-Platform** - Desktop (Windows, macOS, Linux), iOS, and self-hosted
   Docker/web
 
-Wealthfolio 3.7 requires macOS 12 or newer and iOS/iPadOS 16 or newer. macOS 12
-installations should apply current macOS and Safari updates so the system
-WKWebView meets the Safari 16 browser floor. Windows uses the evergreen WebView2
-runtime; Linux and self-hosted installations should keep WebKitGTK or their
-browser updated.
+Nodalora Portfolio 3.8 requires macOS 12 or newer and iOS/iPadOS 16 or newer.
+macOS 12 installations should apply current macOS and Safari updates so the
+system WKWebView meets the Safari 16 browser floor. Windows uses the evergreen
+WebView2 runtime; Linux and self-hosted installations should keep WebKitGTK or
+their browser updated.
 
 ### 🧩 Addon System
 
-Wealthfolio features a powerful addon system that allows developers to extend
-functionality:
+Nodalora Portfolio includes the upstream addon system, which allows developers
+to extend functionality:
 
 - **🔌 Easy Development** - TypeScript SDK with full type safety and hot reload
 - **🔒 Secure** - Comprehensive permission system with user consent
@@ -171,8 +141,8 @@ Ensure you have the following installed on your machine:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/wealthfolio/wealthfolio.git
-   cd wealthfolio
+   git clone https://github.com/CL4YN4/nodalora-portfolio.git
+   cd nodalora-portfolio
    ```
 
 2. **Install dependencies using pnpm**:
@@ -269,7 +239,7 @@ All configuration is done via environment variables in `.env.web`.
   - If a directory is provided, `app.db` will be used inside it
 - `WF_CORS_ALLOW_ORIGINS` - Comma-separated list of allowed CORS origins
   (default: `*`). **Required when auth is enabled** — wildcard `*` is rejected.
-  - Example: `https://wealthfolio.example.com`
+  - Example: `https://portfolio.example.com`
 - `WF_REQUEST_TIMEOUT_MS` - Request timeout in milliseconds (default: `30000`)
 - `WF_STATIC_DIR` - Directory for serving static frontend assets (default:
   `dist`)
@@ -402,29 +372,27 @@ environment variables.
 
 ## Docker
 
-You can either pull the official Docker image or build it yourself locally.
+You can pull the Nodalora Portfolio image or build it yourself locally.
 
 ### Using the Pre-built Image
 
-The latest server build is published to Docker Hub.
+Tagged server builds are published to public GHCR. Pin a full digest for
+deployment; tags are only discovery labels.
 
 ```bash
-docker pull wealthfolio/wealthfolio:latest
+export NODALORA_PORTFOLIO_IMAGE='ghcr.io/cl4yn4/nodalora-portfolio@sha256:<digest-from-GitHub-Release>'
+docker pull "$NODALORA_PORTFOLIO_IMAGE"
 ```
 
-After pulling, use `wealthfolio/wealthfolio:latest` in the run commands below.
-If you build the image locally, swap the image name back to `wealthfolio`.
-
-> **Legacy image:** the same build is also mirrored to `afadil/wealthfolio` so
-> existing `compose.yml` files keep working. New deployments should prefer
-> `wealthfolio/wealthfolio`.
+Replace the placeholder with the signed OCI index digest recorded in the release
+assets. The Compose configuration requires this immutable reference.
 
 ### Building the Image
 
 Build the Docker image directly from source (no pre-build required):
 
 ```bash
-docker build -t wealthfolio .
+docker build -t nodalora-portfolio .
 ```
 
 The build process:
@@ -436,7 +404,8 @@ The build process:
 The final image includes:
 
 - Compiled frontend assets in `/app/dist`
-- `wealthfolio-server` binary at `/usr/local/bin/wealthfolio-server`
+- `wealthfolio-server` binary at `/usr/local/bin/wealthfolio-server` (the
+  upstream internal binary name is retained for compatibility)
 - Alpine Linux base (small footprint)
 
 ### Configuration
@@ -461,11 +430,12 @@ WF_AUTH_PASSWORD_HASH='${HASH}'
 WF_CORS_ALLOW_ORIGINS=http://localhost:8088
 WF_REQUEST_TIMEOUT_MS=30000
 WF_STATIC_DIR=dist
+NODALORA_PORTFOLIO_IMAGE=ghcr.io/cl4yn4/nodalora-portfolio@sha256:<digest-from-GitHub-Release>
 EOF
 ```
 
 Set `WF_CORS_ALLOW_ORIGINS` to the exact URL you will use in your browser, such
-as `http://192.168.1.10:8088` or `https://wealthfolio.example.com`.
+as `http://192.168.1.10:8088` or `https://portfolio.example.com`.
 
 **Option 2: Use inline environment variables** (simpler for testing):
 
@@ -473,8 +443,9 @@ See examples below for inline configuration.
 
 ### Running the Container
 
-All examples below use the published image (`wealthfolio/wealthfolio:latest`).
-If you built locally, substitute your local tag (e.g., `wealthfolio`).
+All examples below use `$NODALORA_PORTFOLIO_IMAGE`, an immutable reference from
+the release. If you built locally, set it to your local tag (for example,
+`nodalora-portfolio`).
 
 **Docker Compose** (recommended):
 
@@ -496,7 +467,7 @@ docker compose --env-file .env.docker -f compose.yml -f compose.proxy.yml up -d
 ```
 
 Use this when the proxy runs on the same Docker network and forwards traffic to
-`http://wealthfolio:8088`.
+`http://nodalora-portfolio:8088`.
 
 **Using Docker CLI environment file**:
 
@@ -520,55 +491,55 @@ EOF
 
 ```bash
 docker run --rm -d \
-  --name wealthfolio \
+  --name nodalora-portfolio \
   --env-file .env.docker-run \
   -p 8088:8088 \
-  -v wealthfolio-data:/data \
-  wealthfolio/wealthfolio:latest
+  -v nodalora-portfolio-data:/data \
+  "$NODALORA_PORTFOLIO_IMAGE"
 ```
 
 **Basic usage** (inline environment variables, testing only):
 
 ```bash
 docker run --rm -d \
-  --name wealthfolio \
+  --name nodalora-portfolio \
   -e WF_LISTEN_ADDR=0.0.0.0:8088 \
   -e WF_DB_PATH=/data/wealthfolio.db \
   -e WF_SECRET_KEY="$(openssl rand -base64 32)" \
   -e WF_AUTH_REQUIRED=false \
   -p 8088:8088 \
-  -v wealthfolio-data:/data \
-  wealthfolio/wealthfolio:latest
+  -v nodalora-portfolio-data:/data \
+  "$NODALORA_PORTFOLIO_IMAGE"
 ```
 
 **Development mode** (with CORS for local Vite dev server, no built-in auth):
 
 ```bash
 docker run --rm -it \
-  --name wealthfolio \
+  --name nodalora-portfolio \
   -e WF_LISTEN_ADDR=0.0.0.0:8088 \
   -e WF_DB_PATH=/data/wealthfolio.db \
   -e WF_CORS_ALLOW_ORIGINS=http://localhost:1420 \
   -e WF_SECRET_KEY="$(openssl rand -base64 32)" \
   -e WF_AUTH_REQUIRED=false \
   -p 8088:8088 \
-  -v wealthfolio-data:/data \
-  wealthfolio/wealthfolio:latest
+  -v nodalora-portfolio-data:/data \
+  "$NODALORA_PORTFOLIO_IMAGE"
 ```
 
 **Production with encryption** (recommended):
 
 ```bash
 docker run --rm -d \
-  --name wealthfolio \
+  --name nodalora-portfolio \
   -e WF_LISTEN_ADDR=0.0.0.0:8088 \
   -e WF_DB_PATH=/data/wealthfolio.db \
   -e WF_SECRET_KEY="$(openssl rand -base64 32)" \
   -e WF_AUTH_PASSWORD_HASH="$(printf 'your-password' | argon2 yoursalt16chars! -id -e)" \
-  -e WF_CORS_ALLOW_ORIGINS=https://wealthfolio.example.com \
+  -e WF_CORS_ALLOW_ORIGINS=https://portfolio.example.com \
   -p 8088:8088 \
-  -v wealthfolio-data:/data \
-  wealthfolio/wealthfolio:latest
+  -v nodalora-portfolio-data:/data \
+  "$NODALORA_PORTFOLIO_IMAGE"
 ```
 
 ### Environment Variables
@@ -625,8 +596,8 @@ steps and provides an isolated environment with all necessary dependencies.
 
 1. **Clone the repository** (if you haven't already):
    ```bash
-   git clone https://github.com/wealthfolio/wealthfolio.git
-   cd wealthfolio
+   git clone https://github.com/CL4YN4/nodalora-portfolio.git
+   cd nodalora-portfolio
    ```
 2. **Open in VS Code**:
    - Open VS Code
@@ -648,8 +619,8 @@ steps and provides an isolated environment with all necessary dependencies.
 
 ## Addon Development
 
-Wealthfolio supports a powerful addon ecosystem that allows developers to extend
-functionality with custom features.
+Nodalora Portfolio includes the upstream addon ecosystem, which allows
+developers to extend functionality with custom features.
 
 ### Quick Start with Addons
 
@@ -667,7 +638,7 @@ functionality with custom features.
    npm run dev:server
    ```
 
-3. **Start Wealthfolio in addon development mode** (in another terminal):
+3. **Start Nodalora Portfolio in addon development mode** (in another terminal):
    ```bash
    VITE_ENABLE_ADDON_DEV_MODE=true pnpm tauri dev
    ```
@@ -684,11 +655,11 @@ Your addon will be automatically discovered and loaded with hot reload support!
 - **🔒 Permission System**: Transparent security with user consent
 - **📦 Private Assets**: Sandbox-safe packaged images, fonts, media, and Wasm
 
-### Official Addons
+### Upstream Addon References
 
-Check out the
-[official addon repository](https://github.com/wealthfolio/wealthfolio-addons/tree/main/official)
-for maintained addon examples including:
+The upstream
+[addon repository](https://github.com/wealthfolio/wealthfolio-addons/tree/main/official)
+contains maintained examples including:
 
 - **Goal Progress Tracker**: Visual goal tracking with calendar like interface
 - **Investment Fees Tracker**: Track and analyze investment fees
@@ -745,7 +716,7 @@ for maintained addon examples including:
 ## Folder Structure
 
 ```
-wealthfolio/
+nodalora-portfolio/
 ├── apps/                        # Application packages
 │   ├── frontend/                # React frontend application
 │   │   ├── src/                 # Source code
@@ -783,7 +754,7 @@ wealthfolio/
 └── tsconfig.json                # TypeScript config
 ```
 
-Official and community addon source lives in the separate
+Upstream official and community addon source lives in the separate
 [wealthfolio-addons](https://github.com/wealthfolio/wealthfolio-addons)
 repository.
 
@@ -834,16 +805,15 @@ Contributions are welcome! Please follow these steps:
 This project is licensed under the AGPL-3.0 license. See the `LICENSE` file for
 details.
 
-Brand assets in `assets/brand/` are trademarks; see
-[TRADEMARKS.md](TRADEMARKS.md).
+This fork uses Nodalora Portfolio branding and includes the upstream trademark
+policy for descriptive references; see
+[NODALORA-DISTRIBUTION.md](NODALORA-DISTRIBUTION.md),
+[NOTICE-NODALORA.md](NOTICE-NODALORA.md), and [TRADEMARKS.md](TRADEMARKS.md).
 
 ---
 
-Wealthfolio and the Wealthfolio logo are trademarks of Teymz Inc. The code is
-licensed under AGPL-3.0; trademarks are not granted under that license.
+Wealthfolio is a trademark of Teymz Inc. This fork is not official Wealthfolio
+and is not sponsored, certified, or endorsed by Teymz Inc. The code is licensed
+under AGPL-3.0; trademarks are not granted under that license.
 
-## 🌟 Star History
-
-## [![Star History Chart](https://api.star-history.com/svg?repos=wealthfolio/wealthfolio&type=Timeline)](https://star-history.com/#wealthfolio/wealthfolio&Date)
-
-Enjoy managing your wealth with **Wealthfolio**! 🚀
+Enjoy managing your portfolio with **Nodalora Portfolio**! 🚀

@@ -525,7 +525,7 @@
     "italian": {
       "title": "義大利退休設定（fondo pensione、TFR、INPS）",
       "portfolio_title": "投資組合（Golden Butterfly、All-Weather……）",
-      "portfolio_desc": "這是 Wealthfolio 追蹤的主要投資組合。請在這裡設定報酬率假設、費用影響與每月投入；它是退休計畫累積資產的主要來源。",
+      "portfolio_desc": "這是 Nodalora Portfolio 追蹤的主要投資組合。請在這裡設定報酬率假設、費用影響與每月投入；它是退休計畫累積資產的主要來源。",
       "fondo_title": "Fondo pensione integrativo（補充退休基金）",
       "fondo_desc": "使用新增退休基金，輸入餘額、提撥、假設報酬率及付款起始年齡。未輸入月付款額時，使用設定支付率估算。提領在基金耗盡時停止；年金付款建模至規劃期末。",
       "inps_title": "Pensione INPS（國家退休金：強制性社會保險）",

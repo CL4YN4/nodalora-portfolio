@@ -200,14 +200,14 @@
     "health": {
       "add_price_for_date": "{{date}} 가격 추가",
       "manual_prices_need_review": "수동 가격을 검토해야 합니다",
-      "carrying_forward_add_date": "Wealthfolio가 마지막 가격을 이어서 사용하고 있습니다. 이 날짜에 별도 값이 필요한 경우에만 추가하세요.",
+      "carrying_forward_add_date": "Nodalora Portfolio가 마지막 가격을 이어서 사용하고 있습니다. 이 날짜에 별도 값이 필요한 경우에만 추가하세요.",
       "review_missing_dates": "누락된 날짜를 검토하세요. 별도 값이 필요한 가격을 추가하며, 항목 사이에는 이어진 가격이 계속 사용됩니다.",
       "price_missing_for_date": "{{date}} 가격 누락",
       "price_history_needs_review": "가격 내역을 검토해야 합니다",
-      "carrying_forward_refetch": "Wealthfolio가 마지막으로 사용 가능한 가격을 이어서 사용하고 있습니다. 거래일이었다면 가격을 다시 가져오세요.",
+      "carrying_forward_refetch": "Nodalora Portfolio가 마지막으로 사용 가능한 가격을 이어서 사용하고 있습니다. 거래일이었다면 가격을 다시 가져오세요.",
       "refetch_history": "공급자 내역을 다시 가져와 누락되거나 오래된 가격을 복원하세요. 정확한 가격이 제공될 때까지 이어진 가격이 사용됩니다.",
       "cost_basis_needs_review": "원가 기준을 검토해야 합니다",
-      "cost_basis_description": "Wealthfolio가 손익을 계산할 수 있도록 이 보유 자산의 매입 금액을 업데이트하세요.",
+      "cost_basis_description": "Nodalora Portfolio가 손익을 계산할 수 있도록 이 보유 자산의 매입 금액을 업데이트하세요.",
       "transactions_need_review": "거래를 검토해야 합니다",
       "transactions_description": "건강 센터가 이 투자에 대해 표시한 거래를 검토하세요.",
       "refetch_prices": "가격 다시 가져오기"

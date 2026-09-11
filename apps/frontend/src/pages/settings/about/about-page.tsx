@@ -74,12 +74,12 @@ export default function AboutSettingsPage() {
       <Card>
         <CardHeader className="flex flex-row items-center gap-4">
           <img
-            src="/app-icon-192.png"
+            src="/nodalora-mark.svg"
             alt={t("settings:about_logo_alt")}
             className="h-12 w-12 rounded-md shadow"
           />
           <div className="flex flex-col">
-            <CardTitle className="text-xl">Wealthfolio</CardTitle>
+            <CardTitle className="text-xl">Nodalora Portfolio</CardTitle>
             <CardDescription>
               {t("settings:about_version", { version: version || "N/A" })}
             </CardDescription>

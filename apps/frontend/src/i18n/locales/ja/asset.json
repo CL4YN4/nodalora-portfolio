@@ -200,14 +200,14 @@
     "health": {
       "add_price_for_date": "{{date}}の価格を追加",
       "manual_prices_need_review": "手動価格の確認が必要です",
-      "carrying_forward_add_date": "Wealthfolio は直前の価格を引き継いでいます。この日に固有の値が必要な場合のみ追加してください。",
+      "carrying_forward_add_date": "Nodalora Portfolio は直前の価格を引き継いでいます。この日に固有の値が必要な場合のみ追加してください。",
       "review_missing_dates": "欠落している日付を確認してください。固有の値が必要な価格を追加し、入力の間では引き続き引き継ぎ価格が使用されます。",
       "price_missing_for_date": "{{date}}の価格がありません",
       "price_history_needs_review": "価格履歴の確認が必要です",
-      "carrying_forward_refetch": "Wealthfolio は直近の利用可能な価格を引き継いでいます。取引日だった場合は価格を再取得してください。",
+      "carrying_forward_refetch": "Nodalora Portfolio は直近の利用可能な価格を引き継いでいます。取引日だった場合は価格を再取得してください。",
       "refetch_history": "プロバイダーの履歴を再取得して、欠落または古い価格を復元してください。正確な価格が利用可能になるまで引き継ぎ価格が使用されます。",
       "cost_basis_needs_review": "取得原価の確認が必要です",
-      "cost_basis_description": "Wealthfolio が損益を計算できるよう、この保有資産の購入額を更新してください。",
+      "cost_basis_description": "Nodalora Portfolio が損益を計算できるよう、この保有資産の購入額を更新してください。",
       "transactions_need_review": "取引の確認が必要です",
       "transactions_description": "ヘルスセンターがこの投資について指摘した取引を確認してください。",
       "refetch_prices": "価格を再取得"

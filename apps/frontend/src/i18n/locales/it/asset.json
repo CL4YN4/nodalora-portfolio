@@ -200,14 +200,14 @@
     "health": {
       "add_price_for_date": "Aggiungi un prezzo per il {{date}}",
       "manual_prices_need_review": "I prezzi manuali richiedono revisione",
-      "carrying_forward_add_date": "Wealthfolio sta riportando l'ultimo prezzo. Aggiungi questa data solo se richiede un valore proprio.",
+      "carrying_forward_add_date": "Nodalora Portfolio sta riportando l'ultimo prezzo. Aggiungi questa data solo se richiede un valore proprio.",
       "review_missing_dates": "Rivedi le date mancanti. Aggiungi i prezzi che richiedono un valore proprio; i prezzi riportati vengono comunque usati tra una voce e l'altra.",
       "price_missing_for_date": "Prezzo mancante per il {{date}}",
       "price_history_needs_review": "Lo storico dei prezzi richiede revisione",
-      "carrying_forward_refetch": "Wealthfolio sta riportando l'ultimo prezzo disponibile. Recupera nuovamente i prezzi se si trattava di un giorno di negoziazione.",
+      "carrying_forward_refetch": "Nodalora Portfolio sta riportando l'ultimo prezzo disponibile. Recupera nuovamente i prezzi se si trattava di un giorno di negoziazione.",
       "refetch_history": "Recupera nuovamente lo storico dal provider per ripristinare i prezzi mancanti o obsoleti. I prezzi riportati vengono usati finché non sono disponibili prezzi esatti.",
       "cost_basis_needs_review": "Il costo di carico richiede revisione",
-      "cost_basis_description": "Aggiorna quanto hai pagato per questa posizione così che Wealthfolio possa calcolare il guadagno/la perdita.",
+      "cost_basis_description": "Aggiorna quanto hai pagato per questa posizione così che Nodalora Portfolio possa calcolare il guadagno/la perdita.",
       "transactions_need_review": "Le transazioni richiedono revisione",
       "transactions_description": "Rivedi le transazioni segnalate dal Centro salute per questo investimento.",
       "refetch_prices": "Recupera nuovamente i prezzi"

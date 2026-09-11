@@ -80,7 +80,7 @@
   },
   "connect": {
     "optional": "Opcional",
-    "title": "Wealthfolio Connect",
+    "title": "Nodalora Portfolio Connect",
     "subtitle": "Sincronize automaticamente suas corretoras mantendo seus dados privados.",
     "learnMore": "Saiba mais sobre o Connect",
     "features": {

@@ -402,7 +402,7 @@ describe("Addon Type Bridge", () => {
       const mockList = vi.fn().mockResolvedValue([
         { ...savedRule, id: ownId },
         { ...savedRule, id: otherAddonId },
-        // A non-addon rule (e.g. from Wealthfolio's own rules UI) — excluded by prefix.
+        // A non-addon rule (e.g. from Nodalora Portfolio's own rules UI) — excluded by prefix.
         { ...savedRule, id: "manual-rule" },
       ]);
 

@@ -1,4 +1,4 @@
-Wealthfolio Server
+Nodalora Portfolio Server
 
 Overview
 - This crate runs the HTTP API (Axum) and serves static files for the web build.
@@ -9,7 +9,7 @@ Run locally (Rust only)
   - `cargo run --manifest-path apps/server/Cargo.toml`
 
 Docker image
-- Pull the latest published server image with `docker pull wealthfolio/wealthfolio:latest`.
+- Pull a published image with `docker pull ghcr.io/cl4yn4/nodalora-portfolio:3.8.0`.
 - Use that tag (or your locally built image) in the Docker run examples inside the root `README.md`.
 
 Key environment variables

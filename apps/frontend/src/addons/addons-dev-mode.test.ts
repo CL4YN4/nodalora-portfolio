@@ -34,7 +34,7 @@ describe("getDevelopmentRuntimePackageError", () => {
     "explains how to upgrade an incompatible development server (%s)",
     (status) => {
       expect(getDevelopmentRuntimePackageError(status, "Not Found")).toBe(
-        "Development server does not support Wealthfolio 3.7 runtime packages. " +
+        "Development server does not support Nodalora Portfolio 3.7 runtime packages. " +
           "Upgrade @wealthfolio/addon-dev-tools to version 3.7.0 or newer.",
       );
     },

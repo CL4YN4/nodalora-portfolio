@@ -81,7 +81,7 @@ export const CLIENT_PRESETS: ClientPreset[] = [
     label: "Jan",
     location: "Settings → MCP Servers → Add",
     build: (url, token) => ({
-      Wealthfolio: {
+      "Nodalora Portfolio": {
         active: true,
         args: [],
         command: "",

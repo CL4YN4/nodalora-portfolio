@@ -1,4 +1,4 @@
-// Wealthfolio Connect Feature
+// Nodalora Portfolio Connect Feature
 // ============================
 
 // Provider and hook

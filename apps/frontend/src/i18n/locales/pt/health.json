@@ -204,7 +204,7 @@
     "retry": "Tentar novamente"
   },
   "sheet": {
-    "groupedPriceMessage": "O Wealthfolio está usando preços arrastados para essas datas. Obtenha novamente ou adicione preços para dias de negociação reais; descarte o problema se as datas eram feriados ou dias não úteis.",
+    "groupedPriceMessage": "O Nodalora Portfolio está usando preços arrastados para essas datas. Obtenha novamente ou adicione preços para dias de negociação reais; descarte o problema se as datas eram feriados ou dias não úteis.",
     "pricesByInvestment": "Preços por investimento",
     "pricesByInvestmentHint": "Abra um investimento para obter novamente ou adicionar preços. Se as datas eram feriados ou dias não úteis, descarte o problema.",
     "priceHistoryNeedsReview": "O histórico de preços precisa de revisão",

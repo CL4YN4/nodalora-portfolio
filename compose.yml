@@ -1,4 +1,4 @@
-# Wealthfolio - Production Docker Compose
+# Nodalora Portfolio - Production Docker Compose
 #
 # Usage: docker compose --env-file .env.docker up -d
 # Reverse proxy overlay: docker compose --env-file .env.docker -f compose.yml -f compose.proxy.yml up -d
@@ -7,14 +7,18 @@
 # Publishes port 8088 for direct browser access.
 
 services:
-  wealthfolio:
-    image: wealthfolio/wealthfolio:latest
-    container_name: wealthfolio
+  nodalora-portfolio:
+    # Set an immutable reference from the GitHub release, for example:
+    # ghcr.io/cl4yn4/nodalora-portfolio@sha256:<published-index-digest>
+    image:
+      ${NODALORA_PORTFOLIO_IMAGE:?Set NODALORA_PORTFOLIO_IMAGE to a pinned Nodalora Portfolio
+      digest}
+    container_name: nodalora-portfolio
     restart: unless-stopped
     ports:
       - "${WF_PORT:-8088}:8088"
     volumes:
-      - wealthfolio-data:/data
+      - nodalora-portfolio-data:/data
     environment:
       WF_LISTEN_ADDR: "0.0.0.0:8088"
       WF_DB_PATH: "/data/wealthfolio.db"
@@ -65,11 +69,11 @@ services:
       WF_OIDC_RP_LOGOUT: "${WF_OIDC_RP_LOGOUT:-}"
 
       # ── AI Agent Access / MCP (optional) ────────────────────────────────
-      # Requires Wealthfolio authentication via password or OIDC.
+      # Requires Nodalora Portfolio authentication via password or OIDC.
       WF_MCP_ENABLED: "${WF_MCP_ENABLED:-false}"
       WF_MCP_AUDIT_ENABLED: "${WF_MCP_AUDIT_ENABLED:-true}"
 
-      # Required when auth is enabled — set to your app's origin, e.g. https://wealthfolio.example.com
+      # Required when auth is enabled — set to your app's origin, e.g. https://portfolio.example.com
       WF_CORS_ALLOW_ORIGINS: "${WF_CORS_ALLOW_ORIGINS:-}"
       WF_REQUEST_TIMEOUT_MS: "${WF_REQUEST_TIMEOUT_MS:-30000}"
     healthcheck:
@@ -92,5 +96,5 @@ services:
       - /tmp:size=64M
 
 volumes:
-  wealthfolio-data:
+  nodalora-portfolio-data:
     driver: local

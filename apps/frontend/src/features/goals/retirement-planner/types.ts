@@ -1,4 +1,4 @@
-// All monetary values in the user's base currency (from Wealthfolio settings)
+// All monetary values in the user's base currency (from Nodalora Portfolio settings)
 // All rates as decimals (0.065 = 6.5%)
 
 export interface GlidepathSettings {
