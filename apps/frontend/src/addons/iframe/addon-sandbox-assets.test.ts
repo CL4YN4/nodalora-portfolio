@@ -1,4 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
+import { blobLike } from "@/test/blob-matchers";
 import {
   loadAddonSandboxRuntimeAssets,
   resetAddonSandboxRuntimeAssetsForTest,
@@ -10,13 +11,9 @@ describe("addon sandbox runtime assets", () => {
   });
 
   it("shares one JavaScript and CSS fetch across concurrent callers", async () => {
-    const script = new Blob(["runtime"], { type: "text/javascript" });
-    const stylesheet = new Blob(["styles"], { type: "text/css" });
     const fetchMock = vi.fn((input: RequestInfo | URL) => {
       const url = typeof input === "string" ? input : input instanceof URL ? input.href : input.url;
-      return Promise.resolve(
-        new Response(url.endsWith(".js") ? script : stylesheet, { status: 200 }),
-      );
+      return Promise.resolve(new Response(url.endsWith(".js") ? "runtime" : "styles"));
     });
     vi.stubGlobal("fetch", fetchMock);
 
@@ -29,6 +26,8 @@ describe("addon sandbox runtime assets", () => {
     expect(fetchMock).toHaveBeenCalledWith(expect.any(String), { cache: "no-cache" });
     expect(first.script).toBe(second.script);
     expect(first.stylesheet).toBe(second.stylesheet);
+    await expect(first.script.text()).resolves.toBe("runtime");
+    await expect(first.stylesheet.text()).resolves.toBe("styles");
   });
 
   it("clears a failed request so a later activation can retry", async () => {
@@ -42,8 +41,8 @@ describe("addon sandbox runtime assets", () => {
 
     await expect(loadAddonSandboxRuntimeAssets()).rejects.toThrow("offline");
     await expect(loadAddonSandboxRuntimeAssets()).resolves.toMatchObject({
-      script: expect.any(Blob),
-      stylesheet: expect.any(Blob),
+      script: blobLike(),
+      stylesheet: blobLike(),
     });
     expect(fetchMock).toHaveBeenCalledTimes(4);
   });

@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 import { AssetLogoRegistry } from "@/lib/asset-logo-registry";
 import type { AssetLogo } from "@/lib/types";
+import { blobLike } from "@/test/blob-matchers";
 import {
   normalizeTickerLogoSymbol,
   resolveTickerLogoFilename,
@@ -38,7 +39,7 @@ function registryWith(assetId: string, displayCode: string, bytes: string) {
 }
 
 function pngResponse(content = "png", headers: Record<string, string> = {}) {
-  return new Response(new Blob([content], { type: "image/png" }), {
+  return new Response(content, {
     headers: { "content-type": "image/png", ...headers },
     status: 200,
   });
@@ -94,7 +95,7 @@ describe("TickerLogoAssetBridge", () => {
     });
     const bridge = new TickerLogoAssetBridge(fetchMock as unknown as typeof fetch);
 
-    await expect(bridge.load("AAPL")).resolves.toBeInstanceOf(Blob);
+    await expect(bridge.load("AAPL")).resolves.toEqual(blobLike("image/png"));
     expect(fetchMock).toHaveBeenCalledOnce();
   });
 
@@ -138,7 +139,7 @@ describe("TickerLogoAssetBridge", () => {
       .mockResolvedValueOnce(pngResponse("recovered"));
     const retryingBridge = new TickerLogoAssetBridge(transientFetch as unknown as typeof fetch);
     await expect(retryingBridge.load("RETRY")).resolves.toBeNull();
-    await expect(retryingBridge.load("RETRY")).resolves.toBeInstanceOf(Blob);
+    await expect(retryingBridge.load("RETRY")).resolves.toEqual(blobLike("image/png"));
     expect(transientFetch).toHaveBeenCalledTimes(2);
   });
 
@@ -149,7 +150,7 @@ describe("TickerLogoAssetBridge", () => {
 
     const blob = await bridge.load("aapl");
 
-    expect(blob).toBeInstanceOf(Blob);
+    expect(blob).toEqual(blobLike("image/png"));
     expect(blob?.type).toBe("image/png");
     await expect(blob!.text()).resolves.toBe("custom-bytes");
     expect(fetchMock).not.toHaveBeenCalled();
@@ -170,7 +171,7 @@ describe("TickerLogoAssetBridge", () => {
 
     const logo = await bridge.load("SHOP.TO");
 
-    expect(logo).toBeInstanceOf(Blob);
+    expect(logo).toEqual(blobLike("image/png"));
     await expect(logo!.text()).resolves.toBe("custom-shop");
     expect(fetchMock).not.toHaveBeenCalled();
   });
@@ -182,7 +183,7 @@ describe("TickerLogoAssetBridge", () => {
 
     const logo = await bridge.load("BRK-B");
 
-    expect(logo).toBeInstanceOf(Blob);
+    expect(logo).toEqual(blobLike("image/png"));
     expect(fetchMock).toHaveBeenCalledOnce();
     expect(String(fetchMock.mock.calls[0][0])).toContain("/ticker-logos/BRK-B.png");
   });
@@ -193,7 +194,7 @@ describe("TickerLogoAssetBridge", () => {
     const bridge = new TickerLogoAssetBridge(fetchMock as unknown as typeof fetch, 2, registry);
 
     const bundled = await bridge.load("AAPL");
-    expect(bundled).toBeInstanceOf(Blob);
+    expect(bundled).toEqual(blobLike("image/png"));
     expect(fetchMock).toHaveBeenCalledTimes(1);
 
     registry.setIndex([
@@ -221,7 +222,7 @@ describe("TickerLogoAssetBridge", () => {
     const registry = registryWith("a1", "AAPL", "custom");
     const bridge = new TickerLogoAssetBridge(fetchMock as unknown as typeof fetch, 2, registry);
 
-    await expect(bridge.load("MSFT")).resolves.toBeInstanceOf(Blob);
+    await expect(bridge.load("MSFT")).resolves.toEqual(blobLike("image/png"));
     expect(fetchMock).toHaveBeenCalledTimes(1);
     expect(String(fetchMock.mock.calls[0][0])).toContain("/ticker-logos/MSFT.png");
   });
@@ -230,7 +231,7 @@ describe("TickerLogoAssetBridge", () => {
     const fetchMock = vi.fn().mockImplementation(() => Promise.resolve(pngResponse()));
     const bridge = new TickerLogoAssetBridge(fetchMock as unknown as typeof fetch);
 
-    await expect(bridge.load("SHOP", "XTSE")).resolves.toBeInstanceOf(Blob);
+    await expect(bridge.load("SHOP", "XTSE")).resolves.toEqual(blobLike("image/png"));
     expect(String(fetchMock.mock.calls[0][0])).toContain("/ticker-logos/SHOP-XTSE.png");
   });
 
@@ -241,7 +242,7 @@ describe("TickerLogoAssetBridge", () => {
       .mockResolvedValueOnce(pngResponse());
     const bridge = new TickerLogoAssetBridge(fetchMock as unknown as typeof fetch);
 
-    await expect(bridge.load("SHOP.TO")).resolves.toBeInstanceOf(Blob);
+    await expect(bridge.load("SHOP.TO")).resolves.toEqual(blobLike("image/png"));
     expect(fetchMock).toHaveBeenCalledTimes(2);
     expect(String(fetchMock.mock.calls[0][0])).toContain("/ticker-logos/SHOP-TO.png");
     expect(String(fetchMock.mock.calls[1][0])).toContain("/ticker-logos/SHOP-XTSE.png");
@@ -254,7 +255,7 @@ describe("TickerLogoAssetBridge", () => {
       .mockResolvedValueOnce(pngResponse());
     const bridge = new TickerLogoAssetBridge(fetchMock as unknown as typeof fetch);
 
-    await expect(bridge.load("SHOP", "XTSE")).resolves.toBeInstanceOf(Blob);
+    await expect(bridge.load("SHOP", "XTSE")).resolves.toEqual(blobLike("image/png"));
     expect(fetchMock).toHaveBeenCalledTimes(2);
     expect(String(fetchMock.mock.calls[0][0])).toContain("/ticker-logos/SHOP-XTSE.png");
     expect(String(fetchMock.mock.calls[1][0])).toContain("/ticker-logos/SHOP.png");
@@ -264,7 +265,7 @@ describe("TickerLogoAssetBridge", () => {
     const fetchMock = vi.fn().mockImplementation(() => Promise.resolve(pngResponse()));
     const bridge = new TickerLogoAssetBridge(fetchMock as unknown as typeof fetch);
 
-    await expect(bridge.load("BTC", null, "CRYPTO")).resolves.toBeInstanceOf(Blob);
+    await expect(bridge.load("BTC", null, "CRYPTO")).resolves.toEqual(blobLike("image/png"));
     expect(fetchMock).toHaveBeenCalledOnce();
     expect(String(fetchMock.mock.calls[0][0])).toContain("/ticker-logos/crypto/BTC.png");
   });
@@ -273,7 +274,9 @@ describe("TickerLogoAssetBridge", () => {
     const fetchMock = vi.fn().mockImplementation(() => Promise.resolve(pngResponse()));
     const bridge = new TickerLogoAssetBridge(fetchMock as unknown as typeof fetch);
 
-    await expect(bridge.load("BTC", null, "CRYPTOCURRENCY")).resolves.toBeInstanceOf(Blob);
+    await expect(bridge.load("BTC", null, "CRYPTOCURRENCY")).resolves.toEqual(
+      blobLike("image/png"),
+    );
     expect(fetchMock).toHaveBeenCalledOnce();
     expect(String(fetchMock.mock.calls[0][0])).toContain("/ticker-logos/crypto/BTC.png");
   });
@@ -285,7 +288,9 @@ describe("TickerLogoAssetBridge", () => {
       .mockResolvedValueOnce(pngResponse());
     const bridge = new TickerLogoAssetBridge(fetchMock as unknown as typeof fetch);
 
-    await expect(bridge.load("BTC-USD", null, "CRYPTOCURRENCY")).resolves.toBeInstanceOf(Blob);
+    await expect(bridge.load("BTC-USD", null, "CRYPTOCURRENCY")).resolves.toEqual(
+      blobLike("image/png"),
+    );
     expect(fetchMock).toHaveBeenCalledTimes(2);
     expect(String(fetchMock.mock.calls[0][0])).toContain("/ticker-logos/crypto/BTC-USD.png");
     expect(String(fetchMock.mock.calls[1][0])).toContain("/ticker-logos/crypto/BTC.png");

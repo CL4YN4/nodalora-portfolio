@@ -21,6 +21,7 @@ import { createSDKHostAPIBridge, type InternalHostAPI } from "../type-bridge";
 import { resetAddonSandboxRuntimeAssetsForTest } from "./addon-sandbox-assets";
 import { setAddonLocalizationSnapshot } from "./addon-sandbox-localization";
 import { loadAddonAsset } from "@/adapters";
+import { blobLike } from "@/test/blob-matchers";
 
 const input = {
   addonId: "test-addon",
@@ -259,8 +260,8 @@ describe("AddonIframeManager", () => {
       expect(postMessage).toHaveBeenCalledWith(
         expect.objectContaining({
           protocolVersion: 1,
-          script: expect.any(Blob),
-          stylesheet: expect.any(Blob),
+          script: blobLike(),
+          stylesheet: blobLike(),
           type: "loadRuntime",
         }),
         "*",
